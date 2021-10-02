@@ -15,14 +15,36 @@
         align-items: center;
         justify-content: space-between;
         .left {
+            display: flex;
+            align-items: center;
+
             .logo {
                 font-size: 50px;
                 font-weight: 500;
                 text-decoration: none;
                 color: inherit;
+                margin-right: 50px;
+            }
+            .itemContainer{
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+
+                .icon{
+                    font-size: 18px;
+                    margin-right: 5px;
+                }
+                span{
+                    font-size: 15px;
+                    font-weight: 500 ;
+                    color: rgb(24, 102, 142);
+                }
             }
         }
         .right {
+            .hamburger{
+                
+            }
         }
     }
 }
