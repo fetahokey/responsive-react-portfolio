@@ -14,3 +14,6 @@ npm i @mui/icons-material
 # If you are not already using MUI in your project, you can add it with:
 # https://github.com/mui-org/material-ui/issues/27846#issuecomment-902448679
 npm install @mui/material @emotion/react @emotion/styled
+
+# install ityped for the blink cursor effect
+npm i ityped 
