@@ -9,7 +9,7 @@
     position: fixed;
     z-index: 3;
     transition: all 1s ease;
-    
+
     .warpper {
         padding: 10px 30px;
         display: flex;
@@ -26,24 +26,26 @@
                 color: inherit;
                 margin-right: 40px;
             }
-            .itemContainer{
+            .itemContainer {
                 display: flex;
                 align-items: center;
                 margin-left: 30px;
-
-                .icon{
+                @include mobile {
+                    display: none;
+                }
+                .icon {
                     font-size: 18px;
                     margin-right: 5px;
                 }
-                span{
+                span {
                     font-size: 15px;
-                    font-weight: 500 ;
+                    font-weight: 500;
                     color: rgb(24, 102, 142);
                 }
             }
         }
         .right {
-            .hamburger{
+            .hamburger {
                 width: 32px;
                 height: 25px;
                 display: flex;
@@ -62,20 +64,20 @@
         }
     }
 
-    &.active{
-        color:white;
-        background-color:  $mainColor;
+    &.active {
+        color: white;
+        background-color: $mainColor;
 
-        .hamburger{
-            span{
-                &:first-child{
+        .hamburger {
+            span {
+                &:first-child {
                     background-color: white;
                     transform: rotate(45deg);
                 }
-                &:nth-child(2){
+                &:nth-child(2) {
                     opacity: 0;
                 }
-                &:last-child{
+                &:last-child {
                     background-color: white;
                     transform: rotate(-45deg);
                 }
