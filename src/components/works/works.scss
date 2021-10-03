@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .works {
     background-color: crimson;
     display: flex;
@@ -5,17 +7,21 @@
     justify-content: center;
     position: relative;
 
-    .arrow{
+    .arrow {
         height: 50px;
         position: absolute;
         cursor: pointer;
 
-        &.left{
+        @include mobile {
+            display: none;
+        }
+
+        &.left {
             left: 100px;
             transform: rotateY(180deg);
         }
 
-        &.right{
+        &.right {
             right: 100px;
         }
     }
@@ -26,6 +32,13 @@
         left: 0;
         display: flex;
         transition: all 1s ease;
+
+        
+        @include mobile {
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+        }
 
         .container {
             width: 100vw;
@@ -42,6 +55,11 @@
                 align-items: center;
                 justify-content: center;
 
+                @include mobile{
+                    width: 90%;
+                    height: 160px;
+                    margin: 10px 0px;
+                }
                 .left {
                     flex: 4;
                     height: 100%;
@@ -49,34 +67,37 @@
                     align-items: center;
                     justify-content: center;
 
-                    .leftContainer{
+                    .leftContainer {
                         width: 90%;
                         height: 70%;
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
 
-                        .imgContainer{
+                        .imgContainer {
                             width: 40px;
                             height: 40px;
                             border-radius: 50%;
-                            background-color: hotpink;
+                            background-color: rgb(184, 179, 247);
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            
-                            img{
+
+                            img {
                                 width: 25px;
                             }
                         }
 
-                        h2{
+                        h2 {
                             font-size: 20px;
                         }
-                        p{
+                        p {
                             font-size: 13px;
+                            @include mobile{
+                                display: none;
+                            }
                         }
-                        span{
+                        span {
                             font-size: 12px;
                             font-weight: 500;
                             text-decoration: underline;
@@ -93,9 +114,9 @@
                     justify-content: center;
 
                     overflow: hidden;
-                    img{
+                    img {
                         width: 400px;
-                        transform: rotate(5deg);
+                        transform: rotate(-5deg);
                     }
                 }
             }
