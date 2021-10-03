@@ -4,6 +4,10 @@
     background-color: lightblue;
     display: flex;
 
+    @include mobile {
+        flex-direction: column;
+    }
+
     .left {
         flex: 1;
         img {
@@ -26,6 +30,7 @@
             height: 70%;
             display: flex;
             flex-direction: column;
+            align-items: center;
             //justify-content: space-between;
 
             * {
@@ -41,17 +46,19 @@
             }
             input {
                 height: 30px;
-                
+                width: 250px;
                 font-size: 18px;
             }
             textarea{
                 height: 120px;
                 resize: none;
+                width: 250px;
             }
             button{
                 font-size: 18px;
                 font-weight: 400;
                 height: 40px;
+                width: 100%;
                 color: $mainColor;
                 background-color: white;
                 cursor: pointer;
