@@ -8,6 +8,11 @@ li{
     border-radius: 10px;
     cursor: pointer;
     
+    @include mobile{
+        font-size: 12px;
+        margin-right: 5px;
+    }
+
     &.active{
         background-color: $mainColor;
         color: white;
